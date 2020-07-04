@@ -1,0 +1,128 @@
+﻿<Window x:Class="ProjektHR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjektHR"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
+    <Window.Resources>
+
+        <local:DefConnPracDataSet x:Key="defConnPracDataSet"/>
+        <CollectionViewSource x:Key="pracowniksViewSource" Source="{Binding Pracowniks, Source={StaticResource defConnPracDataSet}}"/>
+        <CollectionViewSource x:Key="umowasViewSource" Source="{Binding Umowas, Source={StaticResource defConnPracDataSet}}"/>
+        <CollectionViewSource x:Key="wyplatasViewSource" Source="{Binding Wyplatas, Source={StaticResource defConnPracDataSet}}"/>
+
+    </Window.Resources>
+    <Grid>
+
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF009688" UseLayoutRounding="False" ScrollViewer.CanContentScroll="True" >
+            <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Champagne &amp; Limousines" Margin="462,1,506.6,32" Width="105" />
+            <Button x:Name="BtClose" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,28" Click="BtClose_Click">
+                <materialDesign:PackIcon Kind="Close"/>
+            </Button>
+            <Button x:Name="BtMinimalizuj" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,76,28" Click="BtMinimalizuj_Click">
+                <materialDesign:PackIcon Kind="WindowMinimize"/>
+            </Button>
+            <Button x:Name="BtMaksymalizuj" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,39,28" Click="BtMaksymalizuj_Click">
+                <materialDesign:PackIcon Kind="WindowMaximize"/>
+            </Button>
+        </Grid>
+        <Grid Margin="0,33,-0.4,0">
+            <dragablz:TabablzControl Margin="0,-10,0,-0.4">
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController/>
+                </dragablz:TabablzControl.InterTabController>
+            <!--<TabControl x:Name="TabControl" Margin="0,-26,0.4,10">-->
+                <TabItem x:Name="TiPatient" Header="PRACOWNICY">
+                    <Grid  Margin="0,0,0.4,43.2" DataContext="{StaticResource pracowniksViewSource}" >
+                        <TextBox x:Name="TbPracownikImie"  HorizontalAlignment="Left" Margin="35,32,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="375" BorderThickness="0,0,0,1" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <TextBox x:Name="TbPracownikNazwisko"  HorizontalAlignment="Left" Margin="35,89,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwisko" VerticalAlignment="Top" Width="375" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <TextBox x:Name="TbPracownikPesel" HorizontalAlignment="Left"  Margin="449,32,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="PESEL" VerticalAlignment="Top" Width="353" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <TextBox x:Name="TbPracownikAdres" HorizontalAlignment="Left" Margin="35,150,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Adres" VerticalAlignment="Top" Width="375" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <TextBox x:Name="TbPracownikTelefon" HorizontalAlignment="Left"  Margin="449,89,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Telefon" VerticalAlignment="Top" Width="353" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <TextBox x:Name="TbPracownikStawka" HorizontalAlignment="Left"  Margin="698,150,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Stawka godz." VerticalAlignment="Top" Width="104" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <Button x:Name="BtDodajPracownika" Content="Dodaj" HorizontalAlignment="Right" Margin="0,42,45,0" VerticalAlignment="Top" Width="200" Height="30" Click="BtDodajPracownika_Click" />
+                        <Button x:Name="BtWyszukajPracownika" Content="Wyszukaj" HorizontalAlignment="Right" Margin="0,112,45,0" VerticalAlignment="Top" Width="200" Height="30" Click="BtWyszukajPracownika_Click" />
+                        <Button x:Name="BtUsunPracownika" Content="Usuń" HorizontalAlignment="Right" Margin="0,77,45,0" VerticalAlignment="Top" Width="200" Height="30" Click="BtUsunPracownika_Click" />
+                        <Button x:Name="BtPokazWszystkichPracownikow" Content="Pokaż wszystkich" HorizontalAlignment="Right" Margin="0,147,45,0" VerticalAlignment="Top" Width="200" Height="30" Click="BtPokazWszystkichPracownikow_Click" />
+                        <ComboBox x:Name="CbUmowa" materialDesign:HintAssist.Hint="Umowa" HorizontalAlignment="Left" Margin="449,159,0,0" VerticalAlignment="Top" Width="231" FontSize="14" RenderTransformOrigin="0.29,0.405"/>
+                        <DataGrid x:Name="pracowniksDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,233,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserAddRows="False" CellEditEnding="pracowniksDataGrid_CellEditEnding">
+                            <DataGrid.Columns>
+                                <!--<DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="SizeToHeader"/>-->
+                                <DataGridTextColumn x:Name="imieColumn" Binding="{Binding Imie, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Imie" Width="*"/>
+                                <DataGridTextColumn x:Name="nazwiskoColumn" Binding="{Binding Nazwisko, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Nazwisko" Width="*"/>
+                                <DataGridTextColumn x:Name="peselColumn" Binding="{Binding Pesel, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="PESEL" Width="*"/>
+                                <DataGridTextColumn x:Name="adresColumn" Binding="{Binding Adres, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Adres" Width="*"/>
+                                <DataGridTextColumn x:Name="telefonColumn" Binding="{Binding Telefon, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Telefon" Width="*"/>
+                                <DataGridTextColumn x:Name="stawkaColumn" Binding="{Binding Stawka, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Stawka Godz. Netto" Width="*"/>
+                                <DataGridTextColumn x:Name="idUmowaColumn" Binding="{Binding Umowa}" Header="Umowa" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="WYPŁATY">
+                    <Grid DataContext="{StaticResource wyplatasViewSource}" >
+                        <ComboBox x:Name="CbRok"  materialDesign:HintAssist.Hint="Rok" HorizontalAlignment="Left" Margin="687,21,0,0" VerticalAlignment="Top" Width="112" Height="30" FontSize="14"/>
+                        <ComboBox x:Name="CbPracownik" materialDesign:HintAssist.Hint="Pracownik"  HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="254" Height="30" FontSize="14" SelectionChanged="CbPracownik_SelectionChanged"/>
+                        <TextBox x:Name="TbPrLbGodz"  HorizontalAlignment="Left" Margin="291,11,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Liczba godzin" VerticalAlignment="Top" Width="159" BorderThickness="0,0,0,1" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <ComboBox x:Name="CbMiesiac" materialDesign:HintAssist.Hint="Miesiąc"  HorizontalAlignment="Left" Margin="476,21,0,0" VerticalAlignment="Top" Width="173" Height="30" FontSize="14"/>
+
+                        <Button x:Name="BtDodajWyplate" Content="Dodaj" Width="210" HorizontalAlignment="Left" Margin="854,21,0,0" VerticalAlignment="Top" Click="BtDodajWyplate_Click" />
+                        <Button x:Name="BtUsunWyplate" Content="Usuń" HorizontalAlignment="Left" Margin="854,58,0,0" VerticalAlignment="Top" Width="210" Click="BtUsunWyplate_Click" />
+                        <DataGrid x:Name="wyplatasDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,122,10.4,10.2" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserAddRows="False" CellEditEnding="wyplatasDataGrid_CellEditEnding">
+                            <DataGrid.Columns>
+                                <!--<DataGridTextColumn x:Name="idColumn2" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="SizeToHeader"/>-->
+                                <DataGridTextColumn x:Name="idPracownikColumn" Binding="{Binding Pracownik}" Header="Pracownik" Width="160"/>
+                                <DataGridTextColumn x:Name="okresColumn" Binding="{Binding Okres, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Okres" Width="120"/>
+                                <DataGridTextColumn x:Name="umowaColumn" Binding="{Binding Umowa, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Umowa" Width="130"/>
+                                <DataGridTextColumn x:Name="nettoColumn" Binding="{Binding Netto, Mode=TwoWay, StringFormat=N2, UpdateSourceTrigger=LostFocus}" Header="Netto" Width="*"/>
+                                <DataGridTextColumn x:Name="ubEmrytColumn1" Binding="{Binding UbEmryt, Mode=TwoWay, StringFormat=N2, UpdateSourceTrigger=LostFocus}" Header="Ub. Emryt." Width="*"/>
+                                <DataGridTextColumn x:Name="ubRentColumn1" Binding="{Binding UbRent, Mode=TwoWay, StringFormat=N2, UpdateSourceTrigger=LostFocus}" Header="Ub. Rent." Width="*"/>
+                                <DataGridTextColumn x:Name="ubChorColumn1" Binding="{Binding UbChor, Mode=TwoWay, StringFormat=N2, UpdateSourceTrigger=LostFocus}" Header="Ub. Chor." Width="*"/>
+                                <DataGridTextColumn x:Name="ubWypadkColumn1" Binding="{Binding UbWypadk, Mode=TwoWay, StringFormat=N2, UpdateSourceTrigger=LostFocus}" Header="Ub. Wypadk." Width="*"/>
+                                <DataGridTextColumn x:Name="fPColumn1" Binding="{Binding FP, Mode=TwoWay, StringFormat=N2, UpdateSourceTrigger=LostFocus}" Header="FP" Width="*"/>
+                                <DataGridTextColumn x:Name="fGSPColumn1" Binding="{Binding FGSP, Mode=TwoWay, StringFormat=N2, UpdateSourceTrigger=LostFocus}" Header="FGSP" Width="*"/>
+                                <DataGridTextColumn x:Name="BruttoColumn1" Binding="{Binding Brutto, Mode=TwoWay, StringFormat=N2, UpdateSourceTrigger=LostFocus}" Header="Brutto" Width="*"/>
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="TiPhysio" Header="KONFIGURACJA">
+                    <Grid DataContext="{StaticResource umowasViewSource}" >
+                        <TextBox x:Name="TbUmowaNazwa" HorizontalAlignment="Left" Margin="35,32,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwa Umowy" VerticalAlignment="Top" Width="667" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+
+                        <TextBox x:Name="TbUmowaUbEmryt" HorizontalAlignment="Left" Margin="35,86,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Ubezp. Emerytalne [%]" VerticalAlignment="Top" Width="304" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+                        <TextBox x:Name="TbUmowaUbRent" HorizontalAlignment="Left" Margin="398,86,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Ubezp. Rentowe [%]" VerticalAlignment="Top" Width="304" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+                        <TextBox x:Name="TbUmowaUbChor" HorizontalAlignment="Left" Margin="398,141,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Ubezp. Chorobowe [%]" VerticalAlignment="Top" Width="304" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+                        <TextBox x:Name="TbUmowaUbWypadk" HorizontalAlignment="Left" Margin="35,141,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Ubezp. Wypadkowe [%]" VerticalAlignment="Top" Width="304" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+                        <TextBox x:Name="TbUmowaFP" HorizontalAlignment="Left" Margin="398,202,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Fundusz Pracy [%]" VerticalAlignment="Top" Width="304" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+                        <TextBox x:Name="TbUmowaFGSP" HorizontalAlignment="Left" Height="42" Margin="35,202,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Fundusz Gwarantowanych Świadczeń Prac. [%]" VerticalAlignment="Top" Width="304" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+
+                        <Button x:Name="BtDodajUmowe" Content="Dodaj" HorizontalAlignment="Right" Margin="0,42,45,0" VerticalAlignment="Top" Width="200" Height="30" Click="BtDodajUmowe_Click"/>
+                        <Button x:Name="BtUsunUmowe" Content="Usuń" HorizontalAlignment="Right" Margin="0,77,45,0" VerticalAlignment="Top" Width="200" Height="30" Click="BtUsunUmowe_Click"/>
+                        <DataGrid x:Name="umowasDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,269,10.4,2.2" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserAddRows="False" CellEditEnding="umowasDataGrid_CellEditEnding">
+                            <DataGrid.Columns>
+                                <!--<DataGridTextColumn x:Name="idColumn1" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="SizeToHeader"/>-->
+                                <DataGridTextColumn x:Name="nazwaUmowyColumn" Binding="{Binding NazwaUmowy, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Nazwa Umowy" Width="200"/>
+                                <DataGridTextColumn x:Name="ubEmrytColumn" Binding="{Binding UbEmryt, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Ubezp. Emryt. [%]" Width="*"/>
+                                <DataGridTextColumn x:Name="ubRentColumn" Binding="{Binding UbRent, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Ubezp. Rent. [%]" Width="*"/>
+                                <DataGridTextColumn x:Name="ubChorColumn" Binding="{Binding UbChor, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Ubezp. Chor. [%]" Width="*"/>
+                                <DataGridTextColumn x:Name="ubWypadkColumn" Binding="{Binding UbWypadk, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Ubezp. Wypadk. [%]" Width="*"/>
+                                <DataGridTextColumn x:Name="fPColumn" Binding="{Binding FP, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Fundusz Pr. [%]" Width="*"/>
+                                <DataGridTextColumn x:Name="fGSPColumn" Binding="{Binding FGSP, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Fundusz Gw. Św. P. [%]" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+
+                </dragablz:TabablzControl>
+            <!--</TabControl>-->
+        </Grid>
+    </Grid>
+</Window>
