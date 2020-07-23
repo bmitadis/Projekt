@@ -1,18 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using ProjektHR.Models;
 
 namespace ProjektHR
@@ -33,8 +20,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany podczas ładowania okna
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             dbcontext.Pracownicy.Load();  //załadowanie listy pracowników do obiektu bazy
@@ -79,8 +66,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany przy dodawaniu nowego pracownika
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtDodajPracownika_Click(object sender, RoutedEventArgs e)
         {
             if (TbPracownikImie.Text != "" && TbPracownikNazwisko.Text != "")
@@ -114,8 +101,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany przy dodawaniu nowej umowy
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtDodajUmowe_Click(object sender, RoutedEventArgs e)
         {
             if (TbUmowaNazwa.Text != "" && TbUmowaUbEmryt.Text != "" && TbUmowaUbRent.Text != "" && TbUmowaUbChor.Text != "" && TbUmowaUbWypadk.Text != "" && TbUmowaFP.Text != "" && TbUmowaFGSP.Text != "") //sprawdzanie czy wszystkie pola są wypełnione
@@ -144,8 +131,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany przy dodawaniu nowej wypłaty
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtDodajWyplate_Click(object sender, RoutedEventArgs e)
         {
             if (CbPracownik.SelectedIndex < 0) //sprawdzenie czy wybrano pracownika z listy
@@ -186,8 +173,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany po zmianie pracownika w comboboxie
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void CbPracownik_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             wyplatasDataGrid.ItemsSource = dbcontext.Wyplaty.Local.Where(w => w.Pracownik.Equals(CbPracownik.SelectedItem)).ToList(); //przeładowanie danych
@@ -196,8 +183,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany przy usuwaniu wypłaty
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtUsunWyplate_Click(object sender, RoutedEventArgs e)
         {
             Wyplata w1 = (Wyplata)wyplatasDataGrid.SelectedItem; //pobranie obiekty wypłaty z tabeli
@@ -215,8 +202,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany przy usuwaniuo pracownika
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtUsunPracownika_Click(object sender, RoutedEventArgs e)
         {
             Pracownik p1 = (Pracownik)pracowniksDataGrid.SelectedItem;//pobranie obiekty pracownika z tabeli
@@ -239,8 +226,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany przy usuwaniu umowy
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtUsunUmowe_Click(object sender, RoutedEventArgs e)
         {
             Umowa u1 = (Umowa)umowasDataGrid.SelectedItem; //pobranie obiektu umowy z tabeli
@@ -263,8 +250,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany przy zamykaniu aplikacji
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -272,8 +259,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany przy minimalizowaniu aplikacji
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtMinimalizuj_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = System.Windows.WindowState.Minimized;
@@ -281,8 +268,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany przy maksymalizowaniu aplikacji
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtMaksymalizuj_Click(object sender, RoutedEventArgs e)
         {
             if (this.WindowState == System.Windows.WindowState.Normal)
@@ -297,8 +284,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany przy wyszukiwaniu nowego pracownika
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtWyszukajPracownika_Click(object sender, RoutedEventArgs e)
         {
             pracowniksViewSource.Source = Pracownik.SzukajPracownika(TbPracownikImie.Text, TbPracownikNazwisko.Text, TbPracownikPesel.Text, TbPracownikAdres.Text, TbPracownikTelefon.Text, CbUmowa.SelectedItem as Umowa, dbcontext).ToList();//przeładowanie danych
@@ -306,8 +293,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany pp kliknięciu 'Pokaż wszystkich'
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void BtPokazWszystkichPracownikow_Click(object sender, RoutedEventArgs e)
         {
             pracowniksViewSource.Source = dbcontext.Pracownicy.Local;//przeładowanie danych
@@ -315,8 +302,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany po edycji danych w tabeli Pracownicy
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void pracowniksDataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
             dbcontext.SaveChanges();//zapis zmian
@@ -324,8 +311,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany po edycji danych w tabeli Wypłaty
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void wyplatasDataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
             dbcontext.SaveChanges();//zapis zmian
@@ -333,8 +320,8 @@ namespace ProjektHR
         /// <summary>
         /// Kod wykonywany po edycji danych w tabeli Umowy
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">zawiera referencję do controlki/obiektu zdarzenia</param>
+        /// <param name="e">zawiera informacje zdarzenia</param>
         private void umowasDataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
             dbcontext.SaveChanges();//zapis zmian

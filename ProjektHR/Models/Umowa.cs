@@ -36,13 +36,13 @@ namespace ProjektHR.Models
         /// <summary>
         /// Metoda dodająca nową umowę do bazy danych
         /// </summary>
-        /// <param name="nazwa"></param>
-        /// <param name="ubEmryt"></param>
-        /// <param name="ubRent"></param>
-        /// <param name="ubChor"></param>
-        /// <param name="ubWypadk"></param>
-        /// <param name="FP"></param>
-        /// <param name="FGSP"></param>
+        /// <param name="nazwa">Tytul/nazwa umowy</param>
+        /// <param name="ubEmryt">wysokosc składek na ubezpieczenie emerytalne</param>
+        /// <param name="ubRent">wysokosc składek na ubezpieczenie rentowe</param>
+        /// <param name="ubChor">wysokosc składek na ubezpieczenie chorobowe</param>
+        /// <param name="ubWypadk">wysokosc składek na ubezpieczenie wypadkowe</param>
+        /// <param name="FP">fundusz pracy</param>
+        /// <param name="FGSP">Fundusz Gwarantowanych Świadczeń Pracowniczych</param>
         /// <param name="dbcontext"></param>
         public static void DodajUmowe(string nazwa, decimal ubEmryt, decimal ubRent, decimal ubChor, decimal ubWypadk, decimal FP, decimal FGSP, ApplicationDbContext dbcontext)
         {
@@ -60,7 +60,7 @@ namespace ProjektHR.Models
         /// <summary>
         /// Metoda usuwająca nową umowę z bazy danych
         /// </summary>
-        /// <param name="umowa"></param>
+        /// <param name="umowa">obiekt klasy Umowa</param>
         /// <param name="dbcontext"></param>
         public static void UsunUmowe(Umowa umowa, ApplicationDbContext dbcontext)
         {

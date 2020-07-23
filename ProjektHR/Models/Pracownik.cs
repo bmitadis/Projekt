@@ -14,19 +14,50 @@ namespace ProjektHR.Models
     /// </summary>
     public class Pracownik
     {
+        /// <summary>
+        /// ID pracownika 
+        /// </summary>
         [Key]
         public int Id { get; set; }
+        /// <summary>
+        /// imię pracownika
+        /// </summary>
         public string Imie { get; set; }
+        /// <summary>
+        /// nazwisko pracownika
+        /// </summary>
         public string Nazwisko { get; set; }
+        /// <summary>
+        /// pesel pracownika
+        /// </summary>
         public string Pesel { get; set; }
+        /// <summary>
+        /// adres pracownika
+        /// </summary>
         public string Adres { get; set; }
+        /// <summary>
+        /// telefon pracownika
+        /// </summary>
         public string Telefon { get; set; }
+        /// <summary>
+        /// stawka godzinowa pracownika
+        /// </summary>
         public decimal Stawka { get; set; }
         [ForeignKey("Umowa")]
         public int IdUmowa { get; set; }
         public virtual Umowa Umowa { get; set; }
 
         public Pracownik() { }
+        /// <summary>
+        /// Konstruktor klasy Pracownik
+        /// </summary>
+        /// <param name="imie">imię dla nowego użytkownika</param>
+        /// <param name="nazwisko">nazwisko dla nowego użytkownika</param>
+        /// <param name="pesel">pesel nowego użytkownika (11 znaków, zweryfikowany)</param>
+        /// <param name="adres">adres użytkownika jako tekst</param>
+        /// <param name="telefon">numer telefonu jako tekst</param>
+        /// <param name="stawka">stawka godzinowa jako decimal</param>
+        /// <param name="umowa">umowa jako obiekt klasy Umowa</param>
         public Pracownik(string imie, string nazwisko, string pesel, string adres, string telefon, decimal stawka, Umowa umowa)
         {
             this.Imie = imie;
@@ -41,12 +72,12 @@ namespace ProjektHR.Models
         /// <summary>
         /// Metoda dodająca nowego pracownika
         /// </summary>
-        /// <param name="imie"></param>
-        /// <param name="nazwisko"></param>
-        /// <param name="pesel"></param>
-        /// <param name="adres"></param>
-        /// <param name="telefon"></param>
-        /// <param name="umowa"></param>
+        /// <param name="imie">imię dla nowego użytkownika</param>
+        /// <param name="nazwisko">nazwisko dla nowego użytkownika</param>
+        /// <param name="pesel">pesel nowego użytkownika (11 znaków, zweryfikowany)</param>
+        /// <param name="adres">adres użytkownika jako tekst</param>
+        /// <param name="telefon">numer telefonu jako tekst</param>
+        /// <param name="umowa">umowa jako obiekt klasy Umowa</param>
         /// <param name="dbcontext"></param>
         public static void DodajPracownika(string imie, string nazwisko, string pesel, string adres, string telefon, decimal stawka, Umowa umowa, ApplicationDbContext dbcontext)
         {
@@ -65,8 +96,8 @@ namespace ProjektHR.Models
         /// <summary>
         /// Metoda usuwająca pracownika z bazy danych
         /// </summary>
-        /// <param name="pracownik"></param>
-        /// <param name="dbcontext"></param>
+        /// <param name="pracownik">obiekt klasy Pracownik</param>
+        /// <param name="dbcontext"> obiekt klasy ApplicationDbContext</param>
         public static void UsunPracownika(Pracownik pracownik, ApplicationDbContext dbcontext)
         {
             try
@@ -82,13 +113,13 @@ namespace ProjektHR.Models
         /// <summary>
         /// Metoda wyszukująca pracownika w bazie danych
         /// </summary>
-        /// <param name="imie"></param>
-        /// <param name="nazwisko"></param>
-        /// <param name="pesel"></param>
-        /// <param name="adres"></param>
-        /// <param name="telefon"></param>
-        /// <param name="umowa"></param>
-        /// <param name="dbcontext"></param>
+        /// <param name="imie">imię dla nowego użytkownika</param>
+        /// <param name="nazwisko">nazwisko dla nowego użytkownika</param>
+        /// <param name="pesel">pesel nowego użytkownika (11 znaków, zweryfikowany)</param>
+        /// <param name="adres">adres użytkownika jako tekst</param>
+        /// <param name="telefon">numer telefonu jako tekst</param>
+        /// <param name="umowa">umowa jako obiekt klasy Umowa</param>
+        /// <param name="dbcontext">obiekt klasy ApplicationDbContext</param>
         /// <returns></returns>
         public static IEnumerable<Pracownik> SzukajPracownika(string imie, string nazwisko, string pesel, string adres, string telefon, Umowa umowa, ApplicationDbContext dbcontext)
         {
@@ -109,7 +140,7 @@ namespace ProjektHR.Models
         /// <summary>
         /// Metoda sprawdzająca czy podany numer jest poprawnym numerem PESEL
         /// </summary>
-        /// <param name="pesel"></param>
+        /// <param name="pesel">przekazany string do zweryfikowania czy poprawny pesel</param>
         /// <returns>True - PESEL poprawny, False - PESEL błędny</returns>
         public static bool WalidacjaPesel(string pesel)
         {
@@ -132,9 +163,9 @@ namespace ProjektHR.Models
         /// <summary>
         /// Metoda obliczająca sumę kontrolną dla numeru PESEL
         /// </summary>
-        /// <param name="input"></param>
-        /// <param name="weights"></param>
-        /// <param name="offset"></param>
+        /// <param name="input">wejściowy parametr</param>
+        /// <param name="weights">wagi liczb</param>
+        /// <param name="offset">parametr przesunięcia</param>
         /// <returns>Metoda zwraca sumę kontrolną</returns>
         private static int SumKontrolna(string input, int[] weights, int offset = 0)
         {
@@ -148,7 +179,7 @@ namespace ProjektHR.Models
         /// <summary>
         /// Metoda porównująca dwa obiekty typu pracownik
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param name="obj">obiekt do porównania</param>
         /// <returns></returns>
         public override bool Equals(object obj)
         {
