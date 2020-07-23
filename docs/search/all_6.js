@@ -1,14 +1,4 @@
 var searchData=
 [
-  ['fadewipe_114',['FadeWipe',['../class_material_design_themes_1_1_wpf_1_1_transitions_1_1_fade_wipe.html',1,'MaterialDesignThemes::Wpf::Transitions']]],
-  ['find_115',['Find',['../class_dragablz_1_1_dockablz_1_1_layout.html#ad2c904bf69723ff584ad8e5e24140b31',1,'Dragablz.Dockablz.Layout.Find(TabablzControl tabablzControl)'],['../class_dragablz_1_1_dockablz_1_1_layout.html#ad2c904bf69723ff584ad8e5e24140b31',1,'Dragablz.Dockablz.Layout.Find(TabablzControl tabablzControl)']]],
-  ['first_116',['First',['../namespace_dragablz.html#ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04',1,'Dragablz.First()'],['../namespace_dragablz.html#ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04',1,'Dragablz.First()'],['../namespace_dragablz.html#ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04',1,'Dragablz.First()'],['../namespace_dragablz.html#ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04',1,'Dragablz.First()']]],
-  ['fixedheadercount_117',['FixedHeaderCount',['../class_dragablz_1_1_tabablz_control.html#aa80517f87a2cd4cd6426a1df601aa54c',1,'Dragablz::TabablzControl']]],
-  ['flipper_118',['Flipper',['../class_material_design_themes_1_1_wpf_1_1_flipper.html',1,'MaterialDesignThemes::Wpf']]],
-  ['floatingitems_119',['FloatingItems',['../class_dragablz_1_1_dockablz_1_1_layout.html#a18d55f2e95f34da8a501c19919473b1a',1,'Dragablz::Dockablz::Layout']]],
-  ['floatingitemscontainermargin_120',['FloatingItemsContainerMargin',['../class_dragablz_1_1_dockablz_1_1_layout.html#ab9b81d15264d68e40681ca6b3ae44c58',1,'Dragablz::Dockablz::Layout']]],
-  ['floatingitemscontainermarginproperty_121',['FloatingItemsContainerMarginProperty',['../class_dragablz_1_1_dockablz_1_1_layout.html#ae49494b84b64f1f3ffffe28c477e5867',1,'Dragablz::Dockablz::Layout']]],
-  ['floatingitemscontrolstyle_122',['FloatingItemsControlStyle',['../class_dragablz_1_1_dockablz_1_1_layout.html#a305c22c394708c6b3b029c6a29ed1f01',1,'Dragablz::Dockablz::Layout']]],
-  ['floatingitemssource_123',['FloatingItemsSource',['../class_dragablz_1_1_dockablz_1_1_layout.html#a9df6f39271d67ce927b9167d9aed7ac1',1,'Dragablz::Dockablz::Layout']]],
-  ['floatrequestedeventargs_124',['FloatRequestedEventArgs',['../class_dragablz_1_1_dockablz_1_1_float_requested_event_args.html',1,'Dragablz::Dockablz']]]
+  ['equals_43',['Equals',['../class_projekt_h_r_1_1_models_1_1_pracownik.html#a47c407fc8560704a00616b217c3779c7',1,'ProjektHR::Models::Pracownik']]]
 ];

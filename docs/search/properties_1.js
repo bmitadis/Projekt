@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['branch_711',['Branch',['../class_dragablz_1_1_dockablz_1_1_branch_result.html#a871ca8015758d04c15bc1eeacb633ed4',1,'Dragablz::Dockablz::BranchResult']]],
-  ['branchaccessor_712',['BranchAccessor',['../class_dragablz_1_1_dockablz_1_1_layout_accessor.html#abb0275f5ab180b7da7dadf1f60ba57f5',1,'Dragablz::Dockablz::LayoutAccessor']]]
+  ['action_337',['Action',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_pracowniks_row_change_event.html#a7e5e444f35437dc87b9dad5fcdba123c',1,'ProjektHR.DefConnPracDataSet.PracowniksRowChangeEvent.Action()'],['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_umowas_row_change_event.html#a2b46268cf9185437a798adf4bc8cd293',1,'ProjektHR.DefConnPracDataSet.UmowasRowChangeEvent.Action()'],['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_wyplatas_row_change_event.html#a83cf8915902aa416beae48ff46a7771f',1,'ProjektHR.DefConnPracDataSet.WyplatasRowChangeEvent.Action()'],['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_____migration_history_row_change_event.html#a153cf662d2a7dabe71f0eacb33f07470',1,'ProjektHR.DefConnPracDataSet.__MigrationHistoryRowChangeEvent.Action()']]],
+  ['adres_338',['Adres',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_pracowniks_row.html#a2562437cf622a0d68005130ae9842a38',1,'ProjektHR.DefConnPracDataSet.PracowniksRow.Adres()'],['../class_projekt_h_r_1_1_models_1_1_pracownik.html#a5316363e75ab95500120777890145c84',1,'ProjektHR.Models.Pracownik.Adres()']]],
+  ['adrescolumn_339',['AdresColumn',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_pracowniks_data_table.html#a6fc75795b6f0bcf240d9030cc94a51af',1,'ProjektHR::DefConnPracDataSet::PracowniksDataTable']]]
 ];

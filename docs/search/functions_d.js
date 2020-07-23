@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['tabablzcontrol_629',['TabablzControl',['../class_dragablz_1_1_tabablz_control.html#ac323560e360845073b3bfcbb7fbb37eb',1,'Dragablz.TabablzControl.TabablzControl()'],['../class_dragablz_1_1_tabablz_control.html#ac323560e360845073b3bfcbb7fbb37eb',1,'Dragablz.TabablzControl.TabablzControl()']]],
-  ['tabablzcontrols_630',['TabablzControls',['../class_dragablz_1_1_dockablz_1_1_layout_accessor.html#ab7242a750b1328a225965d188272ee66',1,'Dragablz.Dockablz.LayoutAccessor.TabablzControls()'],['../class_dragablz_1_1_dockablz_1_1_layout_accessor.html#ab7242a750b1328a225965d188272ee66',1,'Dragablz.Dockablz.LayoutAccessor.TabablzControls()']]],
-  ['tabemptiedhandler_631',['TabEmptiedHandler',['../class_dragablz_1_1_default_inter_tab_client.html#ad6739e27e5c6317c899a9da7ffc2768f',1,'Dragablz.DefaultInterTabClient.TabEmptiedHandler()'],['../interface_dragablz_1_1_i_inter_tab_client.html#a6ee65df1ce5c4c0e5dd5fb43e177c8de',1,'Dragablz.IInterTabClient.TabEmptiedHandler()'],['../class_dragablz_1_1_default_inter_tab_client.html#ad6739e27e5c6317c899a9da7ffc2768f',1,'Dragablz.DefaultInterTabClient.TabEmptiedHandler()'],['../interface_dragablz_1_1_i_inter_tab_client.html#a6ee65df1ce5c4c0e5dd5fb43e177c8de',1,'Dragablz.IInterTabClient.TabEmptiedHandler()']]],
-  ['tostring_632',['ToString',['../class_tab_menu2_1_1_models_1_1_pracownik.html#aa588e6df4fb7af21788d530a1f8a414d',1,'TabMenu2.Models.Pracownik.ToString()'],['../class_tab_menu2_1_1_models_1_1_umowa.html#a9f114d72ff354464786fc21745c6c1ee',1,'TabMenu2.Models.Umowa.ToString()']]]
+  ['setadresnull_301',['SetAdresNull',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_pracowniks_row.html#a3d1fdea12c4c3457fd4ebd69d327348e',1,'ProjektHR::DefConnPracDataSet::PracowniksRow']]],
+  ['setimienull_302',['SetImieNull',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_pracowniks_row.html#a53c2424ad48ef1249345ae8c83eeb371',1,'ProjektHR::DefConnPracDataSet::PracowniksRow']]],
+  ['setnazwaumowynull_303',['SetNazwaUmowyNull',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_umowas_row.html#a8a19acf2c31936dbe22033894164df3f',1,'ProjektHR::DefConnPracDataSet::UmowasRow']]],
+  ['setnazwiskonull_304',['SetNazwiskoNull',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_pracowniks_row.html#a0ee9d313819bebbc328b198fd8211189',1,'ProjektHR::DefConnPracDataSet::PracowniksRow']]],
+  ['setokresnull_305',['SetOkresNull',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_wyplatas_row.html#a29d009e16875e8bc6dc1441434fd30bc',1,'ProjektHR::DefConnPracDataSet::WyplatasRow']]],
+  ['setpeselnull_306',['SetPeselNull',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_pracowniks_row.html#aab2e19a76a688d0b0d9862939fb03ac0',1,'ProjektHR::DefConnPracDataSet::PracowniksRow']]],
+  ['settelefonnull_307',['SetTelefonNull',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_pracowniks_row.html#a0851661aff5f639b9786d00157466fd3',1,'ProjektHR::DefConnPracDataSet::PracowniksRow']]],
+  ['setumowanull_308',['SetUmowaNull',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_wyplatas_row.html#aaeae397c157e850571d4eaa616cb8752',1,'ProjektHR::DefConnPracDataSet::WyplatasRow']]],
+  ['shouldserializerelations_309',['ShouldSerializeRelations',['../class_projekt_h_r_1_1_def_conn_prac_data_set.html#a4a77457f388904dbdc48f6e1c6a9359b',1,'ProjektHR::DefConnPracDataSet']]],
+  ['shouldserializetables_310',['ShouldSerializeTables',['../class_projekt_h_r_1_1_def_conn_prac_data_set.html#ad4e807db16b2b7ca2e3e9b2d7dd98f11',1,'ProjektHR::DefConnPracDataSet']]],
+  ['sortselfreferencerows_311',['SortSelfReferenceRows',['../class_projekt_h_r_1_1_def_conn_prac_data_set_table_adapters_1_1_table_adapter_manager.html#aea596f763a4cb7b1676b089eee13f5c4',1,'ProjektHR::DefConnPracDataSetTableAdapters::TableAdapterManager']]],
+  ['szukajpracownika_312',['SzukajPracownika',['../class_projekt_h_r_1_1_models_1_1_pracownik.html#a75c84e5e96b1f78199e9cb84cc83a001',1,'ProjektHR::Models::Pracownik']]]
 ];

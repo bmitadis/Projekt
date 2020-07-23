@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['after_682',['After',['../namespace_dragablz.html#ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159',1,'Dragablz.After()'],['../namespace_dragablz.html#ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159',1,'Dragablz.After()'],['../namespace_dragablz.html#ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159',1,'Dragablz.After()'],['../namespace_dragablz.html#ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159',1,'Dragablz.After()']]]
+  ['insertupdatedelete_333',['InsertUpdateDelete',['../class_projekt_h_r_1_1_def_conn_prac_data_set_table_adapters_1_1_table_adapter_manager.html#a986ead5d8487065578f96cfb492521cda27b77cb15d3da7ded0250d0001bc6755',1,'ProjektHR::DefConnPracDataSetTableAdapters::TableAdapterManager']]]
 ];

@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['parameter_754',['Parameter',['../class_material_design_themes_1_1_wpf_1_1_dialog_closing_event_args.html#aad113e883e078752b25e84e3197c10b3',1,'MaterialDesignThemes::Wpf::DialogClosingEventArgs']]],
-  ['parentbranch_755',['ParentBranch',['../class_dragablz_1_1_dockablz_1_1_location_report.html#a34409601d3b368e32ab840b6cf597da8',1,'Dragablz::Dockablz::LocationReport']]],
-  ['partition_756',['Partition',['../class_dragablz_1_1_dockablz_1_1_layout.html#a7c11224b3d2e774bc2312192fd20cf5a',1,'Dragablz.Dockablz.Layout.Partition()'],['../class_dragablz_1_1_inter_tab_controller.html#a820813af20f10808a8bac83d35f0aa84',1,'Dragablz.InterTabController.Partition()']]],
-  ['placementmode_757',['PlacementMode',['../class_material_design_themes_1_1_wpf_1_1_popup_box.html#a8fac833fb72a96c6265deeb301da40d4',1,'MaterialDesignThemes::Wpf::PopupBox']]],
-  ['popupcontent_758',['PopupContent',['../class_material_design_themes_1_1_wpf_1_1_popup_box.html#a3a864de07bba3d68f25a2fef02d046d6',1,'MaterialDesignThemes::Wpf::PopupBox']]],
-  ['popupcontenttemplate_759',['PopupContentTemplate',['../class_material_design_themes_1_1_wpf_1_1_popup_box.html#ad1de44df3b42d9fdaed68985a956ccb7',1,'MaterialDesignThemes::Wpf::PopupBox']]],
-  ['popupmode_760',['PopupMode',['../class_material_design_themes_1_1_wpf_1_1_popup_box.html#aafb69076f3bc84fe420cc6ce2dab2d43',1,'MaterialDesignThemes::Wpf::PopupBox']]]
+  ['relations_381',['Relations',['../class_projekt_h_r_1_1_def_conn_prac_data_set.html#a22f534c17b12e0116319b64fcfa5a3a7',1,'ProjektHR::DefConnPracDataSet']]],
+  ['row_382',['Row',['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_pracowniks_row_change_event.html#ac9236368a9692effccc98943170659ea',1,'ProjektHR.DefConnPracDataSet.PracowniksRowChangeEvent.Row()'],['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_umowas_row_change_event.html#a0ae00b4431122e91056885e46133f3ea',1,'ProjektHR.DefConnPracDataSet.UmowasRowChangeEvent.Row()'],['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_wyplatas_row_change_event.html#af1db5513f2c5a490477b3d37d29a7554',1,'ProjektHR.DefConnPracDataSet.WyplatasRowChangeEvent.Row()'],['../class_projekt_h_r_1_1_def_conn_prac_data_set_1_1_____migration_history_row_change_event.html#a138dd2394e579f2b07c9550d4e7715a1',1,'ProjektHR.DefConnPracDataSet.__MigrationHistoryRowChangeEvent.Row()']]]
 ];
